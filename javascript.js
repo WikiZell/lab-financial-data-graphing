@@ -19,9 +19,15 @@ $( document ).ready(function() {
         })
         .catch(function (error) {
           // handle error
+          alert("API error: Try again later.")
           
         })
       });
+
+
+
+
+      //Functions Block
 
       function chart (respData){
 

@@ -69,10 +69,9 @@ $( document ).ready(function() {
           charData.data.datasets[0].data.push(value)
         });
 
-        setMinMax(charData.data.datasets[0].data);
+        setMinMax(charData.data.datasets[0].data); //Set min and max on UI
 
         var ctx = document.getElementById('chart');
-
         var myChart = new Chart(ctx, charData);
 
       }

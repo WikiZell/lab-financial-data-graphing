@@ -13,13 +13,20 @@
     <div class="formContainer">
         <h1>Filters</h1>
             <form id="graphForm" action="http://api.coindesk.com/v1/bpi/historical/close.json" method="get">
+                <label for="date-start">From:</label>
                 <input type="date" name="start" id="date-start" required>
+                <label for="date-end">To:</label>
                 <input type="date" name="end" id="date-end" required>
-                <select name="currency" id="currency">
-                    <option value="EUR">Euro</option>
-                    <option value="USD">United States Dollar</option>
-                    <option value="GBP">British Pound Sterling</option>
-                </select>
+                
+                <p>
+                    <label for="currency">Currency:</label>
+                    <select name="currency" id="currency">
+                        <option value="EUR">Euro</option>
+                        <option value="USD">United States Dollar</option>
+                        <option value="GBP">British Pound Sterling</option>
+                    </select>
+                </p>
+                
                 <p><button type="submit">Get Data!</button>   </p> 
             
             </form>

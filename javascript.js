@@ -3,8 +3,8 @@ $( document ).ready(function() {
     
     $( "#graphForm" ).submit(function( e ) {
         e.preventDefault();
-        let params = $(this).serialize()
-            url = $(this).attr('action')+"?"+$(this).serialize();
+        url = $(this).attr('action')+"?"+$(this).serialize();
+
         axios({
             method: $(this).attr('method'),
             url: url
@@ -12,9 +12,7 @@ $( document ).ready(function() {
           .then(function (response) {
           // handle success
           
-            let respData = response.data.bpi,
-                minValue,
-                maxValue;
+          let respData = response.data.bpi;
             
           chart(respData);
             
